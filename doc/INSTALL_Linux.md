@@ -58,20 +58,7 @@ $ cd ..
 ### gridutils
 ```
 $ cd gridutils
-$ ./configure
-```
-
-Edit the `makefile` and change this (line ~31):
-
-`CFLAGS = -g -O2 -Wall -pedantic`
-
-To this:
-
-`CFLAGS = -g -O2 -Wall -pedantic -fPIC`
-
-After doing this, do *not* run `./configure` again
-
-```
+$ ./configure CFLAGS="-g -O2 -Wall -pedantic -fPIC"
 $ sudo make install
 $ cd ..
 ```
